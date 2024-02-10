@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="icon" href="./expense.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="ledger">
+            <h2>Expense Tracker</h2>
+            <h4>Your Balance</h4>
+            <h1 id="balance">₹ 0.00</h1>
+            <div class="inc-exp-container">
+                <div class="inc">
+                    <h4>Income</h4>
+                    <p id="inc-amt" class="amt plus">₹ 0.00</p>
+                </div>
+                <div class="exp">
+                    <h4>Expense</h4>
+                    <p id="exp-amt" class="amt minus">₹ 0.00</p>
+                </div>
+            </div>
+            <form action="#" id="form">
+                <div class="form-control">
+                    <label for="desc">Description</label>
+                    <input list="descriptionOptions" type="text" name="desc" id="desc" placeholder="Enter Description"
+                        maxlength="15" />
+                    <datalist id="descriptionOptions">
+                        <option value="Flower">
+                        <option value="Salary">
+                        <option value="Book">
+                        <option value="Petrol">
+                    </datalist>
+                    <label for="transactionDate">Date</label>
+                    <input type="date" name="transactionDate" id="transactionDate"/>
+                </div>
+
+                <div class="form-control">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Amount" />
+                </div>
+
+                <button class="btn btn-primary" type="submit">Add Transaction</button>
+            </form>
+        </div>
+        <div class="transaction">
+            <h3>Transaction Details</h3>
+            <ul class="trans list-group" id="trans">
+                <!-- Transaction items will be added dynamically here -->
+            </ul>
+            <button class="btn btn-success" id="downloadBtn">Download Transactions</button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

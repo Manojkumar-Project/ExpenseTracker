@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #dfe6e9;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 800px;
+    height: 650px;
+    box-shadow: rgba(0, 0, 0, 0.25) 1.95px 1.95px 2.6px;
+    background-color: #ffffffb6;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    user-select: none;
+}
+
+.ledger {
+    padding: 10px;
+    flex: 1;
+    color: #333;
+}
+
+.ledger,
+.transaction {
+    margin-bottom: 20px;
+}
+
+.ledger h2,
+.ledger h4,
+.ledger h1 {
+    font-weight: 400;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.inc-exp-container {
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+}
+
+.inc-exp-container div {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 18px;
+    flex: 1;
+    border-radius: 40px;
+}
+
+.inc-exp-container div p {
+    font-size: 20px;
+}
+
+.inc-exp-container div.inc {
+    border: 3px solid #1dd1a1;
+    color: #1dd1a1;
+}
+
+.inc-exp-container div.exp {
+    border: 3px solid #ee5253;
+    color: #ee5253;
+}
+
+#form {
+    margin-top: 10px;
+}
+
+.form-control {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 0.5;
+    background-color: #1f2225;
+    color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-clip: padding-box;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    border: 1px solid #dedede;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border-radius: 2px;
+}
+
+.btn {
+    background-color: #2e86de;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 16px;
+    border: 0;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.transaction {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.transaction h3 {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 5px;
+}
+
+.trans {
+    list-style-type: none;
+}
+
+.trans li {
+    background-color: #fff;
+    color: #333;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.trans li.inc {
+    border-left: 5px solid #1dd1a1;
+}
+
+.trans li.exp {
+    border-left: 5px solid #ee5253;
+}
+
+.btn-del {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 60px;
+    height: 20px;
+    font-weight: 600;
+    color: #000000;
+    background-color: #e74c3c;
+    border: none;
+    font-size: 14px;
+    line-height: 2px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.trans li:hover .btn-del {
+    opacity: 1;
+}
+
+/* Adjust styles for responsive layout */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .ledger,
+    .transaction {
+        width: 100%;
+    }
+}
